@@ -25,20 +25,13 @@ end
 def sum_to_n? arr, n
   # YOUR CODE HERE
   
-  if (arr.length() == 1) 
+  if (arr.length() <= 1) 
     return false
   end
   
- 
-  
-  
-
-  sum = 0
-  for i in arr do
-    for j in (1..arr.size) do
-      sum = arr[i] + arr[j]
-    
-      if (sum == n)
+  arr.each_with_index do |val_1, i|
+    arr[i+1..-1].each do |val_2|
+      if (val_1 + val_2 == n)
         return true
       end
     end
