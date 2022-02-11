@@ -99,15 +99,12 @@ class BookInStock
   attr_accessor :isbn
   attr_accessor :price
   
-
     
-    def price_as_string(price)
+    def price_as_string
       
-      
+      return ("$" + sprintf("%.2f",price.round(2).to_s))
       
     end
     
-    
-      
       
 end
