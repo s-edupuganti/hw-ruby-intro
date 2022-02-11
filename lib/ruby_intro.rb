@@ -45,10 +45,28 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  return ("Hello, " + name)
 end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  
+  if s.empty?
+    return false 
+  end
+  
+  firstChar = s.chars.first.downcase
+  
+  # if s.chars.first.downcase == 'a' ||
+  
+  if firstChar == 'a' || firstChar == 'e' || firstChar == 'i' || firstChar == 'o' || firstChar == 'u' || /[a-z]/i.match(firstChar) == nil
+    return false
+  end
+  
+  
+  return true
+  
+  
 end
 
 def binary_multiple_of_4? s
